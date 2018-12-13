@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Giphy Demo</title>
+
+	<script src="/socket.io/socket.io.js"></script>
+	<script src="https://code.jquery.com/jquery-1.11.1.js"></script>
+	<script type="text/javascript" src="func.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div id="header">
+		<h1>Giphy Demo</h1>
+
+		<form id="searchForm">
+			<input type="text" id="search">
+			<button>Search</button>
+		</form>
+	</div>
+
+	<div>
+		<h2 id="resultsTitle"></h2>
+		<div id="results"></div>
+	</div>
+
+	<h5>Powered by <a href="https://giphy.com/">Giphy</a></h5>
+</body>
+</html>
