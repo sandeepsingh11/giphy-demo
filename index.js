@@ -1,4 +1,5 @@
-var app = require('express')();
+var express = require('express');
+var app = express();
 var server = require('http').Server(app);
 var io = require('socket.io')(server);
 var GphApiClient = require('giphy-js-sdk-core')
@@ -8,20 +9,22 @@ client = GphApiClient("9EH82AgMMKO7fPL629VK2bsDa2OUvQcQ");
 const port = process.env.PORT || 8080;
 
 
-app.get('/', function(req, res){
-	// serve this html file
-	res.sendFile(__dirname + '/index.html');
-});
+app.use(express.static('./'));
 
-app.get('/style.css', function(req, res){
-	// serve this html file
-	res.sendFile(__dirname + '/style.css');
-});
+// app.get('/', function(req, res){
+// 	// serve this html file
+// 	res.sendFile(__dirname + '/index.html');
+// });
 
-app.get('/func.js', function(req, res){
-	// serve this js file
-	res.sendFile(__dirname + '/func.js');
-});
+// app.get('/style.css', function(req, res){
+// 	// serve this html file
+// 	res.sendFile(__dirname + '/style.css');
+// });
+
+// app.get('/func.js', function(req, res){
+// 	// serve this js file
+// 	res.sendFile(__dirname + '/func.js');
+// });
 
 
 
